@@ -1,0 +1,15 @@
+current directory: /Users/dvk/membean/task/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/dvk/.rubies/ruby-2.6.3/bin/ruby -I /Users/dvk/.rubies/ruby-2.6.3/lib/ruby/2.6.0 -r ./siteconf20190904-27103-1swqm8t.rb extconf.rb
+creating Makefile
+
+current directory: /Users/dvk/membean/task/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/dvk/membean/task/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/dvk/membean/task/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20190904-27103-iie0hz/skiptrace/internal
