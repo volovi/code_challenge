@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Task</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <title>Code challenge</title>
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<%= content_tag :body, data: { action: action_name, controller: controller_name, path: request.path } do %>
+  <%= render "header" %>
+
+  <div class="app-example-overview bg-light py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+          <%= render "flash" %>
+          <%= yield %>
+      </div>
+    </div>
+  </div>
+
+  <%= render "footer" %>
+  <%= javascript_include_tag "application" %>
+<% end %>
 </html>
