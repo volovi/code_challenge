@@ -1,15 +1,20 @@
+# Membean Code Tasks
 
-## Create a minimal Rails app configured to use MySQL with these models:
+This is a minimal Rails app configured to use MySQL with these models:
 
-* User:
+```
+User:
   - username
   - timezone
   - created_at
+```
 
-* Answer:
+```
+Answer:
   - user_id
   - correct
   - created_at
+```
 
 Both of these have model and migration placeholders. You may add more
 tables and columns as needed.
@@ -18,11 +23,11 @@ tables and columns as needed.
 
 Write a rake task to populate the DB with 100,000 users randomly
 distributed across time zones in US, Europe and Asia. For each user,
-generate 1,000 answers. The answer records should have the “created_at”
+generate 1,000 answers. The answer records should have the `created_at`
 timestamps distributed over the last 6 months, and be randomly
-“correct”.
+`correct`.
 
-A stub is available for rake data:populate in lib/tasks/data.rake
+A stub for `rake data:populate` is available in `lib/tasks/data.rake`.
 
 This populated data is then used for tasks B) and C) below.
 

@@ -1,8 +1,15 @@
 # README
 
-Please see [TASKS.md](TASKS.md)
+## Setup
 
-Update this README with whatever steps are necessary to get the
+1. Clone this repository locally
+1. Complete the tasks as outlined in [TASKS.md](TASKS.md)
+1. Update this README with your notes and instructions.
+1. Push your code to a public git repository and send us the link.
+
+## Completed Code
+
+Let us know whatever steps are necessary to get the completed
 application up and running.
 
 Things you may want to cover:
@@ -14,5 +21,4 @@ Things you may want to cover:
 * Database initialization
 * How to run the test suite
 * Services (job queues, cache servers, search engines, etc.)
-* Deployment instructions
 * ...
