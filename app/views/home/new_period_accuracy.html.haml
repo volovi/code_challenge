@@ -1,0 +1,11 @@
+
+= form_for :period_accuracy, url: period_accuracy_path do |form|
+  %h1= "Period Accuracy"
+  .form-group
+    = form.label :name
+    = form.text_field(:name, placeholder: 'User 1', value: 'User 1', class: 'form-control')
+  .form-group
+    = form.label :date_range
+    = form.date_field(:from, value: Date.today.beginning_of_week.prev_week, class: 'form-control')
+    = form.date_field(:to, value: Date.today.beginning_of_week, class: 'form-control')
+  = form.submit('Submit', class: 'btn btn-primary')

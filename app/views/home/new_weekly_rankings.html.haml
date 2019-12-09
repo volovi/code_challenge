@@ -1,0 +1,8 @@
+
+= form_for :weekly_rankings, url: weekly_rankings_path do |form|
+  %h1= "Weekly Rankings"
+  .form-group
+    = form.label :start_date
+    = form.date_field(:from, value: Date.today.beginning_of_week.prev_week, class: 'form-control')
+    %small= "Note: Weeks start on Monday and end on Sunday" 
+  = form.submit("Submit", class: 'btn btn-primary')

@@ -1,0 +1,10 @@
+
+= form_for :period_accuracy, method: :get, url: period_accuracy_path do |form|
+  %h1= "Period Accuracy"
+  .form-group
+    = form.label "Overall accuracy"
+    %h3= @user.answers.accuracy
+  .form-group
+    = form.label "Date range accurancy"
+    %h3= @user.answers.between_dates(@from, @to).accuracy
+  = form.submit('Done', class: 'btn btn-success')

@@ -1,0 +1,17 @@
+
+= form_for :period_accuracy, method: :get, url: weekly_rankings_path do |form|
+  %h1= "Weekly Rankings"
+  .form-group
+    %table{width: '100%'}
+      %thead
+        %tr
+          %th Name
+          %th Rank
+          %th Change
+      %tbody
+        - Answer.top_within_week(@from).each do |i|
+          %tr
+            %td= User.find(i[0]).name
+            %td= i[1]
+            %td= i[2]
+  = form.submit('Done', class: 'btn btn-success')
