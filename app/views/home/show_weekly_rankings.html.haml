@@ -1,6 +1,7 @@
 
-= form_for :period_accuracy, method: :get, url: weekly_rankings_path do |form|
+= form_for :weekly_rankings, method: :get, url: weekly_rankings_path do |form|
   %h1= "Weekly Rankings"
+  = form.hidden_field(:from, value: params[:weekly_rankings][:from])
   .form-group
     %table{width: '100%'}
       %thead

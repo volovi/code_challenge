@@ -1,6 +1,9 @@
 
 = form_for :period_accuracy, method: :get, url: period_accuracy_path do |form|
   %h1= "Period Accuracy"
+  = form.hidden_field(:name, value: params[:period_accuracy][:name])
+  = form.hidden_field(:from, value: params[:period_accuracy][:from])
+  = form.hidden_field(:to, value: params[:period_accuracy][:to])
   .form-group
     = form.label "Overall accuracy"
     %h3= @user.answers.accuracy
