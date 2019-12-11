@@ -6,13 +6,15 @@
     %table{width: '100%'}
       %thead
         %tr
+          %th #
           %th Name
           %th Rank
           %th Change
       %tbody
-        - Answer.top_within_week(@from).each do |i|
+        - Answer.top_within_week(@from).each_with_index do |i, idx|
           %tr
+            %td= idx+1
             %td= User.find(i[0]).name
             %td= i[1]
-            %td= i[2]
+            %td= sprintf("%+d", i[2])
   = form.submit('Done', class: 'btn btn-success')
